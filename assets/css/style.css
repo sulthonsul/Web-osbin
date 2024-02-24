@@ -645,6 +645,15 @@ input[type='checkbox'] {
   }
 }
 
+@media (max-width: 768px) {
+  #hero .background img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .hero-waves {
   /* z-index: -1; */
   display: block;
