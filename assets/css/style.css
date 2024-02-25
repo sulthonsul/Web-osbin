@@ -587,6 +587,10 @@ input[type='checkbox'] {
   white-space: pre;
   overflow: hidden;
   animation-delay: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .cursor {
