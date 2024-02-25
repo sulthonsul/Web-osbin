@@ -338,6 +338,36 @@ function setDarkMode() {
   }
 }
 
+const typewriter = document.getElementById("typing-animation");
+const text = "Selamat Datang di website Official OSBIN";
+let i = 0;
+
+const type = () => {
+  if (i < text.length) {
+    typewriter.textContent += text[i];
+    i++;
+    setTimeout(type, 50);
+  } else {
+    // Tambahkan efek jeda setelah selesai mengetik
+    setTimeout(() => {
+      // Tambahkan animasi cursor berkedip
+      typewriter.innerHTML += `<span class="cursor">|</span>`;
+      setInterval(() => {
+        const cursor = document.querySelector(".cursor");
+        cursor.classList.toggle("hidden");
+      }, 500);
+    }, 500);
+    setTimeout(() => {
+      // Hapus teks yang sudah diketik
+      typewriter.textContent = "";
+      i = 0;
+      type();
+    }, 2000);   
+  }
+};
+
+type();
+
 // document.addEventListener('DOMContentLoaded', function () {
 //   var galleryTop = new Swiper('.gallery-top', {
 //     direction: 'vertical',
