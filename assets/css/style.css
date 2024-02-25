@@ -587,6 +587,10 @@ input[type='checkbox'] {
   white-space: pre;
   overflow: hidden;
   animation-delay: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .cursor {
@@ -675,7 +679,7 @@ input[type='checkbox'] {
 
 @media (max-width: 500px){
   #hero h2{
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
